@@ -1,0 +1,4 @@
+Beams:idA = 2212                    ! First beam, proton
+Beams:idB = 2212                    ! Second beam, proton
+Beams:eCM = 14000                   ! CM energy of collision
+SoftQCD:minBias = on                ! Process to be simulated

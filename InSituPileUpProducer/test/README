@@ -1,0 +1,20 @@
+Try out this module to produce events with large pile up, generated
+in-situ using Pythia8, using CMSSW FastSimulation program.  There is
+no need for large pile up minbias samples ... I suggest using Pythia8
+for hard event also, but you should be able to use any generator.
+
+Instructions for checkout build and run a test:
+
+  scram project CMSSW CMSSW_5_3_10_patch2
+  cd CMSSW_5_3_10_patch2/src/
+  cmsenv
+  mkdir FastSimulation
+  cd FastSimulation/
+  cvs co -d  InSituPileUpProducer UserCode/dasu/InSituPileUpProducer
+  cd InSituPileUpProducer/
+  scram b
+  cd test
+  cmsRun InSituPileUpProducer_cfg.py >& PU140.log&
+
+The test produced 100 Z->mu+mu- events with average PU = 140 at 5 Hz
+on an AMD Opteron(tm) Processor 6176 (just an ordinary box :)
